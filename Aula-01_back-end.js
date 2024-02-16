@@ -17,3 +17,24 @@ function myFunction(peso, altura) {
 
 
 console.log(myFunction(peso, altura)); 
+
+
+
+
+
+function calcularIMC(altura, peso) {
+  // Calcula o IMC
+  const imc = peso / (altura * altura);
+
+  // Retorna a condição
+  switch (true) {
+    case imc < 18.5:
+      return "Baixo peso";
+    case imc >= 18.5 && imc < 25:
+      return "Peso normal";
+    case imc >= 25 && imc < 30:
+      return "Acima do peso";
+    case imc >= 30:
+      return "Obesidade";
+  }
+}
